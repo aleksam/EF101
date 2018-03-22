@@ -26,7 +26,9 @@ public class Movie
 
 2. Configure Connection String 
 > https://msdn.microsoft.com/en-us/library/jj556606(v=vs.113).aspx
-> **Important: add connection string to libs app.config and startup project web.config**
+
+**Important: add connection string to libs app.config and startup project web.config**
+
 ```
 <connectionStrings> 
   <add name="EF101DBContext"  
