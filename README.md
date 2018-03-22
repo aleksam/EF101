@@ -25,8 +25,8 @@ public class Movie
 1. Add EF 6.* via Nuget repo to EF101.DAL
 
 2. Configure Connection String 
-https://msdn.microsoft.com/en-us/library/jj556606(v=vs.113).aspx
-*Important: add connection string to libs app.config and startup project web.config*
+> https://msdn.microsoft.com/en-us/library/jj556606(v=vs.113).aspx
+> **Important: add connection string to libs app.config and startup project web.config**
 ```
 <connectionStrings> 
   <add name="EF101DBContext"  
