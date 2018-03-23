@@ -2,6 +2,7 @@
 * Entity Framework 6.*
 > https://msdn.microsoft.com/en-us/library/gg696172(v=vs.103).aspx
 * CodeFirst with Migrations
+> https://msdn.microsoft.com/en-us/library/jj591621(v=vs.113).aspx
 * Generic Repository with Unit Of Work Pattern
 
 ## Project structure 
