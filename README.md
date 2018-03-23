@@ -1,5 +1,6 @@
 # Mobiam EF101
 * Entity Framework 6.*
+> https://msdn.microsoft.com/en-us/library/gg696172(v=vs.103).aspx
 * CodeFirst with Migrations
 * Generic Repository with Unit Of Work Pattern
 
