@@ -64,3 +64,5 @@ public class EF101DBContext : DbContext
 * ModelConfiguration - Fluent API
 
 add-migration initial -force
+
+7. Jovan Joined
