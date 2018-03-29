@@ -65,4 +65,13 @@ public class EF101DBContext : DbContext
 
 add-migration initial -force
 
-7. Jovan Joined
+## Unit Of Work and Generic Repository Patterns
+
+### Unit Of Work
+Abstracts database operations - Run Query and Transactions
+
+### Generic Repository
+Abstracts Table Queries
+
+### Specific Repository
+Use it to extend Generic Repository to do more specific stuf 
