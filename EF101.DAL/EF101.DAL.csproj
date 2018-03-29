@@ -48,6 +48,14 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="EF101DBContext.cs" />
+    <Compile Include="Migrations\201803251640562_initial.cs" />
+    <Compile Include="Migrations\201803251640562_initial.Designer.cs">
+      <DependentUpon>201803251640562_initial.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201803251910027_addedDirectorClass.cs" />
+    <Compile Include="Migrations\201803251910027_addedDirectorClass.Designer.cs">
+      <DependentUpon>201803251910027_addedDirectorClass.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
@@ -60,6 +68,14 @@
       <Project>{D4BDD102-F07D-4E5A-AD3A-C8B3D9640F96}</Project>
       <Name>EF101.Model</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Migrations\201803251640562_initial.resx">
+      <DependentUpon>201803251640562_initial.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201803251910027_addedDirectorClass.resx">
+      <DependentUpon>201803251910027_addedDirectorClass.cs</DependentUpon>
+    </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

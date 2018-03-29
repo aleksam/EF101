@@ -14,11 +14,13 @@ namespace EF101.DAL
         }
 
         public DbSet<Movie> Movies { get; set; }
+        public DbSet<Actor> Actors { get; set; }
+        public DbSet<Director> Directors { get; set; }
         
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {
             // Disable Pluralizing Convention if needed
-            // modelBuilder.Conventions.Remove<PluralizingTableNameConvention>();
+            modelBuilder.Conventions.Remove<PluralizingTableNameConvention>();
             // https://msdn.microsoft.com/library/system.data.entity.modelconfiguration.conventions.aspx
 
             // Implement specific model to database configuration if needed
