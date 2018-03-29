@@ -69,6 +69,7 @@ add-migration initial -force
 
 ### Unit Of Work
 Abstracts database operations - Run Query and Transactions
+>https://en.wikipedia.org/wiki/ACID
 
 ### Generic Repository
 Abstracts Table Queries

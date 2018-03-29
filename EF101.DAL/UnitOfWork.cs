@@ -11,9 +11,9 @@ namespace EF101.DAL
     {
         private EF101DBContext _context;
 
-        public UnitOfWork(EF101DBContext context)
+        public UnitOfWork()
         {
-            _context = context;
+            _context = new EF101DBContext();
         }
 
         public void SaveChanges()

@@ -11,10 +11,11 @@ namespace EF101.DAL.Tests
     public class DALTest
     {
         [TestMethod]
-        public void ShouldAddNewMovieToDatabaseAndRetreiveListByGenre()
+        public void ShouldPerformCRUD()
         {
-            using (IUnitOfWork _unitOfWork = new UnitOfWork(new EF101DBContext()))
+            using (IUnitOfWork _unitOfWork = new UnitOfWork())
             {
+                // (C)reate
                 Movie newMovie = new Movie() {
                     ID=0,
                     Title = "Test Movie",
@@ -29,13 +30,35 @@ namespace EF101.DAL.Tests
 
                 _unitOfWork.SaveChanges();
 
+                int newMovieId = newMovie.ID;
+
+                // (R)ead
                 var MoviesRepositorySpecific = new MovieRepository(_unitOfWork.context);
 
                 List<Movie> listOfMovies = MoviesRepositorySpecific.GetMoviesByGenre("Comedy");
+
+                // (U)pdate
+                //newMovie.Genre = "Drama";
+
+                //MoviesRepository.Edit(newMovie);
+
+                //_unitOfWork.SaveChanges();
+
+                //Movie updatedMovie = MoviesRepository.GetById(newMovieId);
+
+                // (D)elete
+                MoviesRepository.Delete(newMovie);
+
+                _unitOfWork.SaveChanges();
                 
-                Assert.IsTrue(newMovie.ID > 0);
+                Movie testMovie = MoviesRepository.GetById(newMovieId);
+
+                // Test
+                Assert.IsTrue(newMovieId > 0);
                 Assert.IsTrue(listOfMovies != null);
                 Assert.IsTrue(listOfMovies.Count > 0);
+                // Assert.IsTrue(updatedMovie.Genre == "Drama");
+                Assert.IsTrue(testMovie == null);
             }
         }
     }
