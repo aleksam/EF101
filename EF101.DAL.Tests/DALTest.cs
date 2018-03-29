@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 using EF101.DAL.Interfaces;
 using EF101.DAL.Repositories;
 using EF101.Model;
@@ -10,7 +11,7 @@ namespace EF101.DAL.Tests
     public class DALTest
     {
         [TestMethod]
-        public void ShouldAddNewMovieToDatabase()
+        public void ShouldAddNewMovieToDatabaseAndRetreiveListByGenre()
         {
             using (IUnitOfWork _unitOfWork = new UnitOfWork(new EF101DBContext()))
             {
@@ -28,7 +29,13 @@ namespace EF101.DAL.Tests
 
                 _unitOfWork.SaveChanges();
 
+                var MoviesRepositorySpecific = new MovieRepository(_unitOfWork.context);
+
+                List<Movie> listOfMovies = MoviesRepositorySpecific.GetMoviesByGenre("Comedy");
+                
                 Assert.IsTrue(newMovie.ID > 0);
+                Assert.IsTrue(listOfMovies != null);
+                Assert.IsTrue(listOfMovies.Count > 0);
             }
         }
     }

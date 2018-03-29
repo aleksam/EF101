@@ -49,15 +49,10 @@ namespace EF101.DAL.Repositories
 
         public IQueryable<T> GetAll()
         {
-            throw new NotImplementedException();
+            return _dbSet;
         }
 
         public T GetById(int id)
-        {
-            throw new NotImplementedException();
-        }
-
-        public void Save()
         {
             throw new NotImplementedException();
         }
