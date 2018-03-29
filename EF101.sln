@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
-VisualStudioVersion = 15.0.27004.2006
+VisualStudioVersion = 15.0.27130.2010
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EF101", "EF101\EF101.csproj", "{893A0BA6-CECB-4EF4-8F6F-F39EB67FC344}"
 EndProject
@@ -15,6 +15,8 @@ EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EF101.Model", "EF101.Model\EF101.Model.csproj", "{D4BDD102-F07D-4E5A-AD3A-C8B3D9640F96}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EF101.DAL", "EF101.DAL\EF101.DAL.csproj", "{668C3CAF-39A4-4C54-9384-5B603D36032D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EF101.DAL.Tests", "EF101.DAL.Tests\EF101.DAL.Tests.csproj", "{EE6608D0-CBDE-4CB4-BBEA-5E81CDA59FBD}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -34,6 +36,10 @@ Global
 		{668C3CAF-39A4-4C54-9384-5B603D36032D}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{668C3CAF-39A4-4C54-9384-5B603D36032D}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{668C3CAF-39A4-4C54-9384-5B603D36032D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{EE6608D0-CBDE-4CB4-BBEA-5E81CDA59FBD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EE6608D0-CBDE-4CB4-BBEA-5E81CDA59FBD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EE6608D0-CBDE-4CB4-BBEA-5E81CDA59FBD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EE6608D0-CBDE-4CB4-BBEA-5E81CDA59FBD}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

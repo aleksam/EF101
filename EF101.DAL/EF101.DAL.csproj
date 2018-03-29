@@ -48,8 +48,16 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="EF101DBContext.cs" />
+    <Compile Include="Interfaces\IGenericInterface.cs" />
+    <Compile Include="Interfaces\IUnitOfWork.cs" />
+    <Compile Include="Migrations\201803291640098_initial.cs" />
+    <Compile Include="Migrations\201803291640098_initial.Designer.cs">
+      <DependentUpon>201803291640098_initial.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Repositories\GenericRepository.cs" />
+    <Compile Include="UnitOfWork.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
@@ -60,6 +68,11 @@
       <Project>{D4BDD102-F07D-4E5A-AD3A-C8B3D9640F96}</Project>
       <Name>EF101.Model</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Migrations\201803291640098_initial.resx">
+      <DependentUpon>201803291640098_initial.cs</DependentUpon>
+    </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
